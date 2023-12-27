@@ -8,7 +8,7 @@ require('./models/User');
 require('./models/Survey');
 require('./services/passport');
 
-mongoose.connect(keys.mongoURI);
+mongoose.connect("mongodb+srv://vaibhav1234:poiuytrewq@newcluster.dvgt1up.mongodb.net/?retryWrites=true&w=majority");
 
 const app = express();
 
