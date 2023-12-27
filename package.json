@@ -7,14 +7,14 @@
     "node": "16.20.1",
     "npm": "7.4.0"
   },
-  "scripts": {
-    "start": "node index.js",
-    "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "build": "npm run build --prefix client",
-    "server": "node index.js",
-    "client": "npm run start --prefix client",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
-  },
+"scripts": {
+  "start": "node server",
+  "server": "nodemon server",
+  "client": "npm start --prefix client",
+  "dev": "concurrently \"npm run server\" \"npm run client\"",
+  "build": "npm install --prefix client && npm run build --prefix client",
+  "start-prod": "node server",
+},
   "author": "Mira",
   "license": "ISC",
   "dependencies": {
